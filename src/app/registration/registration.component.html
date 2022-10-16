@@ -1,0 +1,56 @@
+<div class="row justify-content-center my-2">
+  <div class="col-md-4 border">
+    <div class="text-start fw-bold my-2">Sign up and start Working</div>
+    <div class="col-md-12"><hr /></div>
+    <div class="form-group my-2">
+      <form [formGroup]="myRegistrationForm">
+        <div class="row my-2">
+          <div class="col-md-6">
+            <input
+              class="form-control"
+              formControlName="firstName"
+              id="firstName"
+              type="text"
+              placeholder="First Name"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <input
+              class="form-control"
+              formControlName="lastName"
+              id="lastName"
+              type="text"
+              placeholder="Last Name"
+            />
+          </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-12">
+        <input
+          class="form-control"
+          formControlName="email"
+          id="email"
+          type="email"
+          placeholder="Email"
+        />
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-12">
+        <input
+          class="form-control"
+          formControlName="password"
+          id="password"
+          type="password"
+          placeholder="Password"
+        />
+            </div>
+        </div>
+        <button class ="btn btn-primary form-control fw-bold">Sign up</button>
+        <div class="col-md-12"><hr /></div>
+        <div class="text-center">Already have an account? <span><a routerLink="/Login">Login</a></span></div>
+      </form>
+    </div>
+  </div>
+</div>
