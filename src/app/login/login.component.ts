@@ -19,7 +19,7 @@ export class LoginComponent{
     console.log("From Component",this.myForm.value);
     if(this.myForm.valid){
     console.log("Form is valid");
-    let credential = {email:this.myForm.get('email') , password :this.myForm.get('password')};
+    let credential = {email:this.myForm.get('email')!.value , password :this.myForm.get('password')!.value};
     this.authService.login(credential);
     //this.authService.login(this.myForm.value);
   }
