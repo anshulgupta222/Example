@@ -4,12 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { PractiseComponent } from './practise/practise.component';
 import { LoginComponent } from './login/login.component';
 import { PasswordCheckComponent } from './password-check/password-check.component';
 import { RegistrationComponent } from './registration/registration.component';
+
 
 
 @NgModule({
@@ -21,10 +23,15 @@ import { RegistrationComponent } from './registration/registration.component';
     RegistrationComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-center'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
